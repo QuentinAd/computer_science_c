@@ -6,9 +6,9 @@
             "type": "shell",
             "command": "clang",
             "args": [
-                "-o", "${workspaceFolder}/exercism/leap/test", 
-                "${workspaceFolder}/exercism/leap/test.c", 
-                "${workspaceFolder}/exercism/leap/leap.c", 
+                "-o", "${workspaceFolder}/problem_sets/leap/test", 
+                "${workspaceFolder}/problem_sets/leap/test.c", 
+                "${workspaceFolder}/problem_sets/leap/leap.c", 
                 "${workspaceFolder}/../Unity/src/unity.c"
             ],
             "group": {
@@ -21,7 +21,7 @@
         {
             "label": "Run Tests",
             "type": "shell",
-            "command": "${workspaceFolder}/exercism/leap/test",
+            "command": "${workspaceFolder}/problem_sets/leap/test",
             "group": {
                 "kind": "test",
                 "isDefault": true
