@@ -9,7 +9,7 @@ int main(void) {
     if (arr == NULL) {
         return 1;
     }
-    // initialize the array manually for the sake of example
+    // initialize the array manually using pointer arithmetic
     *(arr + 0) = 1; // arr[0]
     *(arr + 1) = 2; // arr[1]
     *(arr + 2) = 3; // arr[2]
