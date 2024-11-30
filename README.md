@@ -53,9 +53,18 @@
 
 ### Environment Setup
 
-<details><summary>Compiling using clang</summary>
+<details><summary>Compiler</summary>
 
-- Compile a single `.c` file:
+- Compiling using the default `cc` compiler
+
+  ```bash
+  cc hello/world.c
+  ```
+
+  >This will default to `a.out` output file
+
+
+- Compile a single `.c` file into specified output file:
 
     ```bash
     clang -o hello/world hello/world.c
@@ -253,7 +262,7 @@ Practice at [`/data-types`](/data-types)
 
 ## Data Structures
 
-<details><summary>Arrays</summary>
+<details><summary>Array</summary>
 
 Practice at [`data_structures/array`](data_structures/array)
 
@@ -268,9 +277,9 @@ Practice at [`data_structures/array`](data_structures/array)
 [Learn more...](/data_structures/array/README.md)
 
 </details>
-<details><summary>Linked Lists</summary>
+<details><summary>Linked List</summary>
 
-Practice at [`data_structures/linked_lists`](data_structures/linked_lists)
+Practice at [`data_structures/linked_list`](data_structures/linked_list)
 
 - **Definition**: A linear data structure where elements (nodes) are connected via pointers.
 - **Types**:
@@ -278,13 +287,16 @@ Practice at [`data_structures/linked_lists`](data_structures/linked_lists)
   - Doubly Linked List
   - Circular Linked List
 - **Key Operations**:
-  - Traversal: `O(n)`
-  - Insertion/Deletion: `O(1)` (when node reference is available).
+  - Insertion
+    - Prepend (Insert at Head): `O(1)`
+    - Append (Insert at Tail): `O(n)`; `O(1)` (with tail)
+  - Search: `O(n)`
+  - Deletion: `O(n)`; `O(1)` (when node reference is available)
 - **Use Cases**:
   - Dynamic memory allocation.
   - Efficient insertions and deletions compared to arrays.
 
-[Learn more...](/data_structures/linked_lists/README.md)
+[Learn more...](/data_structures/linked_list/README.md)
 
 </details>
 <details><summary>Stack</summary>
