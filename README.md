@@ -53,7 +53,99 @@
 
 ### Environment Setup
 
-<details><summary>Compiler</summary>
+<details><summary>Installing C(++) compilers on your OS</summary>
+
+<details><summary>macOS</summary>
+
+To install a C(++) compiler on macOS, you can use **Homebrew**, which is a popular package manager for macOS.
+
+1. Install Homebrew (if not already installed):
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+2. Install the LLVM compiler:
+    ```bash
+    brew install llvm
+    ```
+3. Add the LLVM binaries to your `PATH`:
+    ```bash
+    echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.zshrc
+    source ~/.zshrc
+    ```
+
+Alternatively, you can install **Xcode Command Line Tools**, which includes the `clang` compiler:
+1. Install the tools:
+    ```bash
+    xcode-select --install
+    ```
+
+</details>
+
+<details><summary>Linux</summary>
+
+Most Linux distributions come with the GNU Compiler Collection (GCC) pre-installed. If not, follow the steps below:
+
+#### Ubuntu/Debian-based systems
+1. Update the package list:
+    ```bash
+    sudo apt update
+    ```
+2. Install GCC and G++:
+    ```bash
+    sudo apt install build-essential
+    ```
+3. Verify the installation:
+    ```bash
+    gcc --version
+    ```
+
+#### Fedora/Red Hat-based systems
+1. Install the Development Tools group:
+    ```bash
+    sudo dnf groupinstall "Development Tools"
+    ```
+
+#### Arch Linux
+1. Install GCC and other necessary tools:
+    ```bash
+    sudo pacman -S base-devel
+    ```
+
+</details>
+
+<details><summary>Windows</summary>
+
+Windows requires installing an external toolchain for C/C++ development. Below are some options:
+
+#### Option 1: Install MinGW
+1. Download MinGW from the official website: [MinGW](https://sourceforge.net/projects/mingw/)
+2. Install MinGW and select the `gcc` and `g++` compilers.
+3. Add the MinGW `bin` directory to your `PATH`:
+    - Go to **System Properties** → **Environment Variables**.
+    - Edit the `PATH` variable and add the path to the MinGW `bin` folder (e.g., `C:\MinGW\bin`).
+
+#### Option 2: Install MSYS2
+1. Download MSYS2 from the official website: [MSYS2](https://www.msys2.org/)
+2. Install it and run the terminal.
+3. Install GCC and G++ using the following commands:
+    ```bash
+    pacman -S mingw-w64-ucrt-x86_64-gcc
+    ```
+4. Add MSYS2's `bin` directory to your `PATH`.
+
+#### Option 3: Install Visual Studio
+1. Download and install **Visual Studio** from [Visual Studio](https://visualstudio.microsoft.com/).
+2. During installation, select the **Desktop development with C++** workload.
+3. Use the **Developer Command Prompt** to compile your programs:
+    ```cmd
+    cl hello_world.c
+    ```
+
+</details>
+
+</details>
+
+<details><summary>Running compilation</summary>
 
 - Compiling using the default `cc` compiler
 
