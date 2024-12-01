@@ -67,25 +67,25 @@
 - Compile a single `.c` file into specified output file:
 
     ```bash
-    clang -o hello/world hello/world.c
+    clang -o hello/world.out hello/world.c
     ```
 
 - Compile a single `.cpp` file:
 
     ```bash
-    clang++ -o hello/world hello/world.cpp
+    clang++ -o hello/world.out hello/world.cpp
     ```
 
 - Run the clang on multiple `.c` files to compile a program:
 
     ```bash
-    clang -o program hello/world.c hello/utils.c
+    clang -o program.out hello/world.c hello/utils.c
     ```
 
 - Run the clang on multiple `.cpp` files to compile a program:
 
     ```bash
-    clang++ -o program hello/world.cpp hello/utils.cpp
+    clang++ -o program.out hello/world.cpp hello/utils.cpp
     ```
 
 </details>
@@ -96,7 +96,7 @@
 - Single command
 
     ```bash
-    cd problem_sets && clang -o leap/test leap/test.c leap/main.c ../Unity/src/unity.c && ./leap/test
+    cd problem_sets && clang -o leap/test.out leap/test.c leap/main.c ../Unity/src/unity.c && ./leap/test.out
     ```
 
 - Setting up tasks on VS Code 
