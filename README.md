@@ -9,7 +9,7 @@
     - [Basic Operations](#basic-operations)
     - [Functions](#functions)
     - [Data Types](#data-types)
-    - [Pointers & References](#pointers--references) (*Coming Soon*)
+    - [Pointers & References](#pointers--references)
     - [Structuring Codebase](#structuring-codebase) (*Coming Soon*)
     - [Structures & Classes](#structures--classes) (*Coming Soon*)
     - [Exception Handling](#exception-handling) (*Coming Soon*)
@@ -296,7 +296,7 @@ Practice at [`/functions`](/functions)
 
 ### Data Types
 
-Practice at [`/data-types`](/data-types)
+Practice at [`/data_types`](/data_types)
 
 - **Primitive Data Types**:
   - `int`: Stores integers (e.g., `int x = 10;`).
@@ -312,7 +312,47 @@ Practice at [`/data-types`](/data-types)
   - Use appropriate data types to optimize memory usage.
   - Type casting allows conversion (e.g., `(float)intVar`).
 
-[Learn more...](/data-types/README.md)
+[Learn more...](/data_types/README.md)
+
+<br>**[⬆ back to top](#table-of-contents)**
+
+### Pointers & References
+
+Practice at [`/pointers__references](/pointers__references)
+
+- **Pointers**:
+  - Definition: Variables that store the memory address of another variable.
+  - Declaration: `int *ptr;`
+  - Usage: Access or modify the value at the memory address using the dereference operator (`*`).
+  - Example:
+    ```c
+    int x = 10;
+    int *ptr = &x; // ptr points to x's memory address
+    printf("%d", *ptr); // prints 10
+    ```
+  - Key Notes:
+    - Use `&` to get a variable's address (e.g., `int *p = &var;`).
+    - Dereferencing (`*ptr`) accesses the value stored at the address.
+
+- **References** (C++ only):
+  - Definition: An alias for another variable, acting as its alternative name.
+  - Declaration: `int &ref = var;`
+  - Example:
+    ```cpp
+    int x = 10;
+    int &ref = x; // ref is a reference to x
+    ref++; // increments x to 11
+    printf("%d", x); // prints 11
+    ```
+  - Key Notes:
+    - Cannot be null and must be initialized at declaration.
+    - Often used in function arguments to avoid copying (e.g., `void func(int &num)`).
+
+- **Key Differences**:
+  - Pointers can be reassigned; references cannot.
+  - Pointers can be null; references cannot.
+
+[Learn more...](/pointers__references/README.md)
 
 <br>**[⬆ back to top](#table-of-contents)**
 
