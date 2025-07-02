@@ -1,5 +1,5 @@
-#include "../../../Unity/src/unity.h"
-#include "leap.h"
+#include "../../../../Unity/src/unity.h"
+#include "../../../problem_sets/leap/leap.h"
 
 // Optional hooks for setup and teardown (can be left empty if not needed)
 void setUp(void) {}
