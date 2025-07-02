@@ -188,7 +188,9 @@ Windows requires installing an external toolchain for C/C++ development. Below a
 - Single command
 
     ```bash
-    cd problem_sets && clang -o leap/test.out leap/test.c leap/main.c ../Unity/src/unity.c && ./leap/test.out
+    clang -o tests/problem_sets/leap/test tests/problem_sets/leap/test.c \
+        problem_sets/leap/leap.c ../Unity/src/unity.c && \
+    ./tests/problem_sets/leap/test
     ```
 
 - Setting up tasks on VS Code 
