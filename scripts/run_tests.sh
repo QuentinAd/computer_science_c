@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# compile all C files (except Unity sources) to ensure they build
-for cfile in $(find . -name "*.c" -not -path "./Unity/*" -not -path "./problem_sets/leap/test.c"); do
+# compile all C files except Unity sources and tests
+for cfile in $(find . -name "*.c" -not -path "./Unity/*" -not -path "./tests/*"); do
     base=$(basename "$cfile")
     if [ "$base" = "unity.c" ]; then
         continue
@@ -20,5 +20,9 @@ if [ ! -d Unity ]; then
 fi
 
 # build and run leap tests
-gcc problem_sets/leap/test.c problem_sets/leap/leap.c Unity/src/unity.c -I Unity/src -o leap_tests
+gcc tests/problem_sets/leap/test.c problem_sets/leap/leap.c Unity/src/unity.c -I Unity/src -o leap_tests
 ./leap_tests
+
+# build and run stack and sort tests
+gcc tests/test.c tests/stack.c tests/sort.c Unity/src/unity.c -I Unity/src -o cs_tests
+./cs_tests
