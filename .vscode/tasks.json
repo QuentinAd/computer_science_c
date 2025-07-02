@@ -2,13 +2,13 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build and Run Tests",
+            "label": "Build Leap Tests",
             "type": "shell",
             "command": "clang",
             "args": [
-                "-o", "${workspaceFolder}/problem_sets/leap/test", 
-                "${workspaceFolder}/problem_sets/leap/test.c", 
-                "${workspaceFolder}/problem_sets/leap/leap.c", 
+                "-o", "${workspaceFolder}/tests/problem_sets/leap/test",
+                "${workspaceFolder}/tests/problem_sets/leap/test.c",
+                "${workspaceFolder}/problem_sets/leap/leap.c",
                 "${workspaceFolder}/../Unity/src/unity.c"
             ],
             "group": {
@@ -16,18 +16,41 @@
                 "isDefault": true
             },
             "problemMatcher": [],
-            "detail": "Compiles the Unity test file and runs it."
+            "detail": "Compiles the leap year Unity tests."
         },
         {
-            "label": "Run Tests",
+            "label": "Run Leap Tests",
             "type": "shell",
-            "command": "${workspaceFolder}/problem_sets/leap/test",
+            "command": "${workspaceFolder}/tests/problem_sets/leap/test",
             "group": {
                 "kind": "test",
                 "isDefault": true
             },
             "problemMatcher": [],
-            "detail": "Runs the compiled test binary."
+            "detail": "Runs the compiled leap year test binary."
+        },
+        {
+            "label": "Build Stack & Sort Tests",
+            "type": "shell",
+            "command": "clang",
+            "args": [
+                "-o", "${workspaceFolder}/tests/test",
+                "${workspaceFolder}/tests/test.c",
+                "${workspaceFolder}/tests/stack.c",
+                "${workspaceFolder}/tests/sort.c",
+                "${workspaceFolder}/../Unity/src/unity.c"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Compiles stack and bubble sort Unity tests."
+        },
+        {
+            "label": "Run Stack & Sort Tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/tests/test",
+            "group": "test",
+            "problemMatcher": [],
+            "detail": "Runs the stack and bubble sort test binary."
         }
     ]
 }

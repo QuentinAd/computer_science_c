@@ -14,3 +14,9 @@ A **stack** is a linear data structure that follows the **Last-In, First-Out (LI
 Stacks are commonly used for expression evaluation, backtracking, and managing function calls.
 
 See [stack.c](stack.c) for a basic array implementation.
+
+## Compile and Run
+
+```bash
+clang stack.c -o stack && ./stack
+```

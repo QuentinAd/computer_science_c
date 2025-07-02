@@ -1,60 +1,51 @@
+#include "stack.h"
 #include <stdio.h>
 
-#define MAX_SIZE 100
+#define STACK_CAPACITY 100
 
-typedef struct {
-    int data[MAX_SIZE];
-    int top;
-} Stack;
+static int stack[STACK_CAPACITY];
+static int top;
 
-void init(Stack *s) {
-    s->top = -1;
+void init(void) {
+    top = -1;
 }
 
-int is_full(Stack *s) {
-    return s->top == MAX_SIZE - 1;
-}
-
-int is_empty(Stack *s) {
-    return s->top == -1;
-}
-
-void push(Stack *s, int value) {
-    if (is_full(s)) {
-        printf("Stack overflow\n");
-        return;
+void push(int value) {
+    if (!is_full()) {
+        stack[++top] = value;
     }
-    s->data[++s->top] = value;
 }
 
-int pop(Stack *s) {
-    if (is_empty(s)) {
-        printf("Stack underflow\n");
-        return -1;
+int pop(void) {
+    if (!is_empty()) {
+        return stack[top--];
     }
-    return s->data[s->top--];
+    return -1; // indicates error
 }
 
-int peek(Stack *s) {
-    if (is_empty(s)) {
-        printf("Stack empty\n");
-        return -1;
+int peek(void) {
+    if (!is_empty()) {
+        return stack[top];
     }
-    return s->data[s->top];
+    return -1;
 }
 
+bool is_empty(void) {
+    return top == -1;
+}
+
+bool is_full(void) {
+    return top == STACK_CAPACITY - 1;
+}
+
+#ifdef TEST_STACK
 int main(void) {
-    Stack s;
-    init(&s);
-
-    push(&s, 10);
-    push(&s, 20);
-    push(&s, 30);
-
-    printf("Top element: %d\n", peek(&s));
-    printf("Popped: %d\n", pop(&s));
-    printf("Popped: %d\n", pop(&s));
-    printf("Popped: %d\n", pop(&s));
-
+    init();
+    push(1);
+    push(2);
+    printf("peek: %d\n", peek());
+    printf("pop: %d\n", pop());
+    printf("pop: %d\n", pop());
     return 0;
 }
+#endif
