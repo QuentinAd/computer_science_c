@@ -10,9 +10,9 @@
     - [Functions](#functions)
     - [Data Types](#data-types)
     - [Pointers & References](#pointers--references)
-    - [Structuring Codebase](#structuring-codebase) (*Coming Soon*)
-    - [Structures & Classes](#structures--classes) (*Coming Soon*)
-    - [Exception Handling](#exception-handling) (*Coming Soon*)
+    - [Structuring Codebase](#structuring-codebase)
+    - [Structures & Classes](#structures--classes)
+    - [Exception Handling](#exception-handling)
 - [Computer Science Concepts](#computer-science-concepts)
     - [Asymptotic Notation (Big O)](#asymptotic-notation)
     - [Data Structures](#data-structures)
@@ -355,6 +355,31 @@ Practice at [`/pointers__references](/pointers__references)
   - Pointers can be null; references cannot.
 
 [Learn more...](/pointers__references/README.md)
+
+### Structuring Codebase
+
+Practice at [`/structuring_codebase`](/structuring_codebase)
+
+- Organizes source files in `src` and headers in `include`.
+- Demonstrates compiling multiple files together.
+- Example build:
+  ```bash
+  clang src/main.c src/utils.c -Iinclude -o app
+  ```
+
+### Structures & Classes
+
+Practice at [`/structures__classes`](/structures__classes)
+
+- `struct_example.c` uses a C `struct` to store data.
+- `class_example.cpp` provides a minimal C++ class example.
+
+### Exception Handling
+
+Practice at [`/exception_handling`](/exception_handling)
+
+- `error_codes.c` returns status codes to report errors.
+- `try_catch.cpp` shows C++ `try`/`catch` and exceptions.
 
 <br>**[⬆ back to top](#table-of-contents)**
 
