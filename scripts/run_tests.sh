@@ -26,3 +26,7 @@ gcc tests/problem_sets/leap/test.c problem_sets/leap/leap.c Unity/src/unity.c -I
 # build and run stack and sort tests
 gcc tests/test.c tests/stack.c tests/sort.c Unity/src/unity.c -I Unity/src -o cs_tests
 ./cs_tests
+
+# build and run memory utils tests
+gcc tests/memory_utils_test.c memory_operations/memory_utils/memory_utils.c Unity/src/unity.c -I Unity/src -DMEMORY_UTILS_TEST -o memory_utils_tests
+./memory_utils_tests
