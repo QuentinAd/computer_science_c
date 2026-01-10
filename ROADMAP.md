@@ -1,0 +1,31 @@
+# Roadmap
+
+This roadmap tracks upcoming phases for expanding the repository with memory operations and missing C/C++ topics.
+
+## Phase 1: Repository scaffolding & roadmap updates
+- Update the top-level README to include Memory Operations and outline upcoming topics.
+- Add the `memory_operations/` directory with initial subtopics and example code.
+- Maintain this roadmap so contributors can track progress.
+
+## Phase 2: Build the fundamentals of memory operations
+- Pointer arithmetic walkthroughs and exercises.
+- Dynamic memory management with heap allocations.
+- Memory layout demonstrations (stack, heap, globals, statics).
+- Custom `memcpy`/`memset` implementations with unit tests.
+- Exercises and problem sets per subtopic.
+
+## Phase 3: Add memory-mapped I/O (MMIO)
+- Simulated MMIO using `mmap` on regular files.
+- Optional embedded example with strict safety warnings.
+- Cross-platform notes for Linux, macOS, and Windows.
+
+## Phase 4: Fill in missing C/C++ concepts
+- Structuring a codebase (headers, modules, build tools).
+- Structures & classes in C and C++.
+- Exception handling patterns in C and C++.
+
+## Phase 5: Additional enhancements and polish
+- Finish missing operator topics under `basic_operations/`.
+- Expand sorting algorithms in `algorithms/sorting/`.
+- Improve testing guidance and coverage with Unity.
+- Add safety notes and interactive exercises.
