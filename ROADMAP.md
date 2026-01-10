@@ -11,7 +11,7 @@ This roadmap tracks upcoming phases for expanding the repository with memory ope
 - Pointer arithmetic walkthroughs and exercises.
 - Dynamic memory management with heap allocations.
 - Memory layout demonstrations (stack, heap, globals, statics).
-- Custom `memcpy`/`memset` implementations with unit tests.
+- [x] Custom `memcpy`/`memset` implementations with unit tests.
 - Exercises and problem sets per subtopic.
 
 ## Phase 3: Add memory-mapped I/O (MMIO)

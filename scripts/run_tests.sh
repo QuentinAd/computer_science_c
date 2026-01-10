@@ -23,6 +23,7 @@ fi
 gcc tests/problem_sets/leap/test.c problem_sets/leap/leap.c Unity/src/unity.c -I Unity/src -o leap_tests
 ./leap_tests
 
-# build and run stack and sort tests
-gcc tests/test.c tests/stack.c tests/sort.c Unity/src/unity.c -I Unity/src -o cs_tests
+# build and run stack, sort, and memory utils tests
+gcc tests/test.c tests/stack.c tests/sort.c \
+    memory_operations/memory_utils/memory_utils.c Unity/src/unity.c -I Unity/src -o cs_tests
 ./cs_tests
