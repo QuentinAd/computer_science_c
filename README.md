@@ -185,6 +185,13 @@ Windows requires installing an external toolchain for C/C++ development. Below a
 
 <details><summary>Unit tests</summary>
 
+- Run the full Unity-based test suite:
+
+    ```bash
+    bash scripts/run_tests.sh
+    ```
+
+- Unity is used for C unit tests (see `tests/` and `Unity/src`).
 
 - Single command
 
@@ -221,6 +228,19 @@ Windows requires installing an external toolchain for C/C++ development. Below a
 
 [Learn more...](/basic_operations/arithmetic/README.md)
 
+- Relational & Equality Operators
+
+    - Practice at [/basic_operations/relational/](/basic_operations/relational/)
+
+    - Operators: `>`, `<`, `>=`, `<=`, `==`, `!=`
+    - Compare values to create boolean expressions.
+
+    - **Key Notes:**
+
+        - Prefer comparing integers directly, use tolerances for floats.
+
+[Learn more...](/basic_operations/relational/README.md)
+
 - Logical Operators
 
     - Practice at [/basic_operations/logical/](/basic_operations/logical/)
@@ -234,6 +254,31 @@ Windows requires installing an external toolchain for C/C++ development. Below a
 
 [Learn more...](/basic_operations/logical/README.md)
 
+- Assignment Operators
+
+    - Practice at [/basic_operations/assignment/](/basic_operations/assignment/)
+
+    - Operators: `=`, `+=`, `-=`, `*=`, `/=`, `%=` (plus bitwise assignments)
+    - Combine updates with assignment in a single expression.
+
+    - **Key Notes:**
+
+        - Integer division still truncates in compound assignments.
+
+[Learn more...](/basic_operations/assignment/README.md)
+
+- Conditional (Ternary) Operator
+
+    - Practice at [/basic_operations/conditional/](/basic_operations/conditional/)
+
+    - Operator: `?:`
+    - Pick between two values based on a condition.
+
+    - **Key Notes:**
+
+        - Keep ternary expressions short for readability.
+
+[Learn more...](/basic_operations/conditional/README.md)
 
 - Loops: for/while
 
