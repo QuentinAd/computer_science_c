@@ -16,7 +16,8 @@ void *simple_memset(void *buffer, int value, size_t size) {
 
 #### Example
 
-See [`memory_utils.c`](./memory_utils.c) for a small implementation and comparison with the standard library.
+See [`memory_utils_demo.c`](./memory_utils_demo.c) for a small implementation and comparison with the standard library.
+The reusable functions live in [`memory_utils.c`](./memory_utils.c) with declarations in [`memory_utils.h`](./memory_utils.h).
 
 #### Exercise
 
