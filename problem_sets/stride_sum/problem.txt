@@ -1,0 +1,4 @@
+Pointer Stride Sum
+
+Sum every `stride`-th element of an integer array using pointer arithmetic.
+Return 0 if the input pointer is NULL, the length is 0, or the stride is 0.

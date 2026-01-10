@@ -730,7 +730,10 @@ Practice at [`algorithms/caches`](algorithms/caches)
 
 ## Problem Sets
 
-Practice at [`/problem_sets`](/problem_sets)
+Practice at [`/problem_sets`](/problem_sets):
+
+- [Leap Year](/problem_sets/leap)
+- [Pointer Stride Sum](/problem_sets/stride_sum)
 
 <br>**[⬆ back to top](#table-of-contents)**
 

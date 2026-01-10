@@ -3,16 +3,16 @@
 This roadmap tracks upcoming phases for expanding the repository with memory operations and missing C/C++ topics.
 
 ## Phase 1: Repository scaffolding & roadmap updates
-- Update the top-level README to include Memory Operations and outline upcoming topics.
-- Add the `memory_operations/` directory with initial subtopics and example code.
-- Maintain this roadmap so contributors can track progress.
+- [x] Update the top-level README to include Memory Operations and outline upcoming topics.
+- [x] Add the `memory_operations/` directory with initial subtopics and example code.
+- [x] Maintain this roadmap so contributors can track progress.
 
 ## Phase 2: Build the fundamentals of memory operations
-- Pointer arithmetic walkthroughs and exercises.
-- Dynamic memory management with heap allocations.
-- Memory layout demonstrations (stack, heap, globals, statics).
+- [x] Pointer arithmetic walkthroughs and exercises.
+- [x] Dynamic memory management with heap allocations.
+- [x] Memory layout demonstrations (stack, heap, globals, statics).
 - [x] Custom `memcpy`/`memset` implementations with unit tests.
-- Exercises and problem sets per subtopic.
+- [x] Exercises and problem sets per subtopic.
 
 ## Phase 3: Add memory-mapped I/O (MMIO)
 - Simulated MMIO using `mmap` on regular files.
@@ -20,9 +20,9 @@ This roadmap tracks upcoming phases for expanding the repository with memory ope
 - Cross-platform notes for Linux, macOS, and Windows.
 
 ## Phase 4: Fill in missing C/C++ concepts
-- Structuring a codebase (headers, modules, build tools).
-- Structures & classes in C and C++.
-- Exception handling patterns in C and C++.
+- [x] Structuring a codebase (headers, modules, build tools).
+- [x] Structures & classes in C and C++.
+- [x] Exception handling patterns in C and C++.
 
 ## Phase 5: Additional enhancements and polish
 - Finish missing operator topics under `basic_operations/`.
