@@ -10,6 +10,7 @@
     - [Functions](#functions)
     - [Data Types](#data-types)
     - [Pointers & References](#pointers--references)
+    - [Memory Operations](#memory-operations)
     - [Structuring Codebase](#structuring-codebase) (*Coming Soon*)
     - [Structures & Classes](#structures--classes) (*Coming Soon*)
     - [Exception Handling](#exception-handling) (*Coming Soon*)
@@ -355,6 +356,48 @@ Practice at [`/pointers__references](/pointers__references)
   - Pointers can be null; references cannot.
 
 [Learn more...](/pointers__references/README.md)
+
+<br>**[⬆ back to top](#table-of-contents)**
+
+---
+
+### Memory Operations
+
+Practice at [`/memory_operations`](/memory_operations)
+
+- **Pointer arithmetic**: move through arrays by stepping the pointer.
+- **Dynamic memory**: allocate and free heap memory with `malloc`, `calloc`, `realloc`, and `free`.
+- **Memory layout**: compare stack, heap, global, and static addresses.
+- **Memory utilities**: build simple versions of `memcpy` and `memset`.
+
+[Learn more...](/memory_operations/README.md)
+
+<br>**[⬆ back to top](#table-of-contents)**
+
+---
+
+### Structuring Codebase (*Coming Soon*)
+
+- Organize multi-file projects with headers and implementations.
+- Learn header guards, build commands, and basic make usage.
+
+<br>**[⬆ back to top](#table-of-contents)**
+
+---
+
+### Structures & Classes (*Coming Soon*)
+
+- Explore C structs, nested data, and typedef patterns.
+- Compare with C++ classes, constructors, and RAII.
+
+<br>**[⬆ back to top](#table-of-contents)**
+
+---
+
+### Exception Handling (*Coming Soon*)
+
+- C error handling with return codes and `errno`.
+- C++ exceptions, custom error types, and try/catch patterns.
 
 <br>**[⬆ back to top](#table-of-contents)**
 
