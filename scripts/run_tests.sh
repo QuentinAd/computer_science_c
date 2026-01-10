@@ -23,6 +23,10 @@ fi
 gcc tests/problem_sets/leap/test.c problem_sets/leap/leap.c Unity/src/unity.c -I Unity/src -o leap_tests
 ./leap_tests
 
+# build and run stride sum tests
+gcc tests/problem_sets/stride_sum/test.c problem_sets/stride_sum/stride_sum.c Unity/src/unity.c -I Unity/src -o stride_sum_tests
+./stride_sum_tests
+
 # build and run stack, sort, and memory utils tests
 gcc tests/test.c tests/stack.c tests/sort.c \
     memory_operations/memory_utils/memory_utils.c Unity/src/unity.c -I Unity/src -o cs_tests
