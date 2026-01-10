@@ -11,9 +11,9 @@
     - [Data Types](#data-types)
     - [Pointers & References](#pointers--references)
     - [Memory Operations](#memory-operations)
-    - [Structuring Codebase](#structuring-codebase) (*Coming Soon*)
-    - [Structures & Classes](#structures--classes) (*Coming Soon*)
-    - [Exception Handling](#exception-handling) (*Coming Soon*)
+    - [Structuring Codebase](#structuring-codebase)
+    - [Structures & Classes](#structures--classes)
+    - [Exception Handling](#exception-handling)
 - [Computer Science Concepts](#computer-science-concepts)
     - [Asymptotic Notation (Big O)](#asymptotic-notation)
     - [Data Structures](#data-structures)
@@ -376,28 +376,42 @@ Practice at [`/memory_operations`](/memory_operations)
 
 ---
 
-### Structuring Codebase (*Coming Soon*)
+### Structuring Codebase
 
-- Organize multi-file projects with headers and implementations.
-- Learn header guards, build commands, and basic make usage.
+Practice at [`/structuring_codebase`](/structuring_codebase)
 
-<br>**[⬆ back to top](#table-of-contents)**
+- **Headers and modules**: split declarations into `.h` files and implementations into `.c` files.
+- **Include guards**: prevent duplicate symbol errors during compilation.
+- **Build commands**: compile multiple source files into one program.
 
----
-
-### Structures & Classes (*Coming Soon*)
-
-- Explore C structs, nested data, and typedef patterns.
-- Compare with C++ classes, constructors, and RAII.
+[Learn more...](/structuring_codebase/README.md)
 
 <br>**[⬆ back to top](#table-of-contents)**
 
 ---
 
-### Exception Handling (*Coming Soon*)
+### Structures & Classes
 
-- C error handling with return codes and `errno`.
-- C++ exceptions, custom error types, and try/catch patterns.
+Practice at [`/structures__classes`](/structures__classes)
+
+- **C structs**: group related fields, nest data, and add helper functions.
+- **Typedefs**: create readable aliases for struct types.
+- **C++ classes**: compare constructors, destructors, and access control.
+
+[Learn more...](/structures__classes/README.md)
+
+<br>**[⬆ back to top](#table-of-contents)**
+
+---
+
+### Exception Handling
+
+Practice at [`/exception_handling`](/exception_handling)
+
+- **C error handling**: return codes, sentinel values, and `errno`.
+- **C++ exceptions**: try/catch, standard exceptions, and custom errors.
+
+[Learn more...](/exception_handling/README.md)
 
 <br>**[⬆ back to top](#table-of-contents)**
 
