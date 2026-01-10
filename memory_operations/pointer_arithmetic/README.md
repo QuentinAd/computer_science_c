@@ -16,10 +16,12 @@ cursor++;
 printf("%p -> %d\n", (void *)cursor, *cursor);
 ```
 
-#### Example
+#### Examples
 
 See [`pointer_walk.c`](./pointer_walk.c) for a full walkthrough that prints the addresses and values of an array.
+Use [`pointer_stride.c`](./pointer_stride.c) to see how stepping by a stride changes which elements you visit.
 
 #### Exercise
 
-Change the `step` value inside the loop to `2` or `3`. Observe how the pointer jumps across the array.
+Change the `step` value inside `pointer_stride.c` to `1`, `2`, or `3`. Then change the starting index in the loop to
+begin at `1` and compare the addresses printed in each run.

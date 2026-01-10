@@ -22,6 +22,7 @@ void *simple_memset(void *buffer, int value, size_t size) {
   return buffer;
 }
 
+#ifndef MEMORY_UTILS_TEST
 int main(void) {
   char message[] = "memory";
   char copy[16] = {0};
@@ -34,3 +35,4 @@ int main(void) {
 
   return 0;
 }
+#endif
