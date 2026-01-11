@@ -15,9 +15,9 @@ This roadmap tracks upcoming phases for expanding the repository with memory ope
 - [x] Exercises and problem sets per subtopic.
 
 ## Phase 3: Add memory-mapped I/O (MMIO)
-- Simulated MMIO using `mmap` on regular files.
-- Optional embedded example with strict safety warnings.
-- Cross-platform notes for Linux, macOS, and Windows.
+- [x] Simulated MMIO using `mmap` on regular files.
+- [x] Optional embedded example with strict safety warnings.
+- [x] Cross-platform notes for Linux, macOS, and Windows.
 
 ## Phase 4: Fill in missing C/C++ concepts
 - [x] Structuring a codebase (headers, modules, build tools).
