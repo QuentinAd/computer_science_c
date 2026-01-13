@@ -414,7 +414,7 @@ Practice at [`/memory_operations`](/memory_operations)
 - **Dynamic memory**: allocate and free heap memory with `malloc`, `calloc`, `realloc`, and `free`.
 - **Memory layout**: compare stack, heap, global, and static addresses.
 - **Memory utilities**: build simple versions of `memcpy` and `memset`.
-- **Memory-mapped I/O**: simulate MMIO by mapping a file and treating its bytes like registers.
+- **Memory-mapped I/O**: simulate MMIO by toggling GPIO-style pins via a mapped file.
 
 [Learn more...](/memory_operations/README.md)
 

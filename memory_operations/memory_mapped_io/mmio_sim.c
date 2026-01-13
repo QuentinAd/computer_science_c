@@ -10,8 +10,23 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+enum {
+  GPIO_ENABLE = 0,
+  GPIO_DIR = 1,
+  GPIO_OUT = 2,
+  GPIO_IN = 3,
+  GPIO_REG_COUNT = 4
+};
+
+static void print_gpio_state(const volatile uint32_t *regs) {
+  printf("ENABLE=0x%08" PRIx32 "\n", regs[GPIO_ENABLE]);
+  printf("DIR   =0x%08" PRIx32 "\n", regs[GPIO_DIR]);
+  printf("OUT   =0x%08" PRIx32 "\n", regs[GPIO_OUT]);
+  printf("IN    =0x%08" PRIx32 "\n", regs[GPIO_IN]);
+}
+
 int main(void) {
-  const char *path = "mmio_sim.bin";
+  const char *path = "mmio_gpio.bin";
   const size_t map_size = 4096;
   int fd = open(path, O_RDWR | O_CREAT | O_TRUNC, 0644);
   if (fd < 0) {
@@ -34,18 +49,21 @@ int main(void) {
   }
 
   volatile uint32_t *regs = (volatile uint32_t *)mapping;
-  enum { REG_CONTROL = 0, REG_STATUS = 1, REG_DATA = 2, REG_RESULT = 3 };
+  regs[GPIO_ENABLE] = 0x1;
+  regs[GPIO_DIR] = 0x0F;
+  regs[GPIO_OUT] = 0x05;
+  regs[GPIO_IN] = regs[GPIO_OUT] & regs[GPIO_DIR];
 
-  regs[REG_CONTROL] = 0x1;
-  regs[REG_STATUS] = 0x0;
-  regs[REG_DATA] = 0x2;
-  regs[REG_RESULT] = regs[REG_DATA] * 4;
-  regs[REG_STATUS] = 0xA5;
+  puts("Initial GPIO state:");
+  print_gpio_state(regs);
 
-  printf("CONTROL=0x%08" PRIx32 "\n", regs[REG_CONTROL]);
-  printf("STATUS=0x%08" PRIx32 "\n", regs[REG_STATUS]);
-  printf("DATA=0x%08" PRIx32 "\n", regs[REG_DATA]);
-  printf("RESULT=0x%08" PRIx32 "\n", regs[REG_RESULT]);
+  regs[GPIO_OUT] ^= 0x02;
+  regs[GPIO_IN] = regs[GPIO_OUT] & regs[GPIO_DIR];
+
+  puts("\nAfter toggling pin 1:");
+  print_gpio_state(regs);
+
+  regs[GPIO_ENABLE] = 0x0;
 
   if (msync((void *)regs, map_size, MS_SYNC) != 0) {
     fprintf(stderr, "msync failed: %s\n", strerror(errno));

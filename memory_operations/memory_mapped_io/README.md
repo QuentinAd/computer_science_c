@@ -10,9 +10,16 @@ regs[0] = 0x1;   // control register
 regs[1] = 0x2;   // data register
 ```
 
-#### Example
+#### Example: GPIO-style peripheral
 
-See [`mmio_sim.c`](./mmio_sim.c) for a simulated MMIO example that uses `mmap` on a regular file and treats a handful of 32-bit words as registers.
+See [`mmio_sim.c`](./mmio_sim.c) for a simulated GPIO peripheral. It maps a small file into memory and treats 32-bit words as GPIO registers:
+
+- `GPIO_ENABLE`: turn the peripheral on/off.
+- `GPIO_DIR`: set pins as input/output.
+- `GPIO_OUT`: write pin states.
+- `GPIO_IN`: read pin states.
+
+Try running the program in one terminal and, in another terminal, watch the backing file change with `hexdump -C mmio_gpio.bin` to see the real-time writes.
 
 #### Embedded-only sketch (read with caution)
 
@@ -38,4 +45,4 @@ DEVICE->CONTROL = 0x1;  // enable device
 
 #### Exercise
 
-Extend the simulator to add a `STATUS` register that updates whenever `DATA` changes. Print both values after each write.
+Extend the simulator to toggle an extra pin every loop iteration, then read it back via `GPIO_IN` and print the observed state.
