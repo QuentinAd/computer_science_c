@@ -6,11 +6,9 @@ int sum_with_stride(const int *values, size_t length, size_t stride) {
   }
 
   int sum = 0;
-  const int *cursor = values;
 
   for (size_t index = 0; index < length; index += stride) {
-    sum += *cursor;
-    cursor += stride;
+    sum += values[index];
   }
 
   return sum;
