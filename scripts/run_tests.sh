@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # compile all C files except Unity sources and tests
-for cfile in $(find . -name "*.c" -not -path "./Unity/*" -not -path "./tests/*"); do
+for cfile in $(find . -name "*.c" -not -path "./.git/*" -not -path "./Unity/*" -not -path "./tests/*"); do
     base=$(basename "$cfile")
     if [ "$base" = "unity.c" ]; then
         continue
