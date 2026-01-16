@@ -1,3 +1,5 @@
+#include <errno.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -5,11 +7,23 @@ int main(int argc, char **argv) {
   size_t count = 5;
 
   if (argc > 1) {
-    count = (size_t)strtoul(argv[1], NULL, 10);
-    if (count == 0) {
-      fprintf(stderr, "Provide a positive array size.\n");
+    char *endptr = NULL;
+    unsigned long parsed = 0;
+
+    errno = 0;
+    parsed = strtoul(argv[1], &endptr, 10);
+
+    if (errno == ERANGE || endptr == argv[1] || *endptr != '\0') {
+      fprintf(stderr, "Provide a valid positive array size.\n");
       return 1;
     }
+
+    if (parsed == 0 || parsed > SIZE_MAX / sizeof(int)) {
+      fprintf(stderr, "Provide a positive array size within limits.\n");
+      return 1;
+    }
+
+    count = (size_t)parsed;
   }
 
   int *values = calloc(count, sizeof(int));
