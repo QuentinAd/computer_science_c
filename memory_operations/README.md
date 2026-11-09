@@ -11,5 +11,6 @@ Use the subtopics below to explore common patterns and experiment with small, fo
 - [Dynamic Memory](./dynamic_memory/README.md)
 - [Memory Layout](./memory_layout/README.md)
 - [Memory Utilities](./memory_utils/README.md)
+- [Memory-Mapped I/O](./memory_mapped_io/README.md)
 
 <br>**[⬆ back to top](#memory-operations)**
